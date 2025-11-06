@@ -7,6 +7,9 @@ int main(void)
     printf("Enter a number : ");
     scanf("%d", &x);
 
+    printf("Arjit Singh\n");
+    printf("A50105225074\n");
+        
     if (x%2 == 0)
     {
         printf("This is an EVEN number");

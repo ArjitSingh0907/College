@@ -13,5 +13,7 @@ int main(void)
     a = b;
     b = temp;
 
+    printf("Arjit Singh\n");
+    printf("A50105225074\n");
     printf("Swapping Numbers Gives a = %i and b = %i", a, b);
 }
