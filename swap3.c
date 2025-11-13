@@ -20,5 +20,7 @@ void swap(int x, int y)
     x = y;
     y = temp;
 
+    printf("Arjit Singh\n");
+    printf("A50105225074\n");
     printf("After Swapping, a = %d and b = %d\n", x , y);
 }

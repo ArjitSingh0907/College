@@ -21,6 +21,8 @@ int main(void)
         }
     }
 
+    printf("Arjit Singh\n");
+    printf("A50105225074\n");
     printf("UpperCase : %s\n", name);
     return 0;
 }

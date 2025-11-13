@@ -90,5 +90,7 @@ int main(void)
         printf("Invalid choice.\n");
     }
 
+    printf("Arjit Singh\n");
+    printf("A50105225074\n");
     return 0;
 }

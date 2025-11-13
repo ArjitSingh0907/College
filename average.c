@@ -19,6 +19,8 @@ int main(void)
     }
 
     float average = (sum / max);
+    printf("Arjit Singh\n");
+    printf("A50105225074\n");
     printf("Sum of numbers : %d\n", sum);
     printf("Average of numbers : %.2f\n", average);
 }

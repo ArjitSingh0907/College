@@ -26,5 +26,7 @@ int main(void)
         printf("Factorial of %d is: %d\n", num, result);
     }
 
+    printf("Arjit Singh\n");
+    printf("A50105225074\n");
     return 0;
 }
