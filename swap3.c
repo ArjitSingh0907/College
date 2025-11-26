@@ -7,7 +7,6 @@ int main(void)
 {
     int a = 7;
     int b = 9;
-    int temp;
 
     printf("Before Swapping, a = %d and b = %d\n", a , b);
     swap(a , b);
