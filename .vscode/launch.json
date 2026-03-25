@@ -2,24 +2,15 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run C++ Program",
+      "name": "Run current file",
       "type": "cppdbg",
       "request": "launch",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
       "args": [],
-      "stopAtEntry": false,
-      "externalConsole": false,
       "cwd": "${fileDirname}",
-      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+      "console": "integratedTerminal",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb.exe",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ],
-      "preLaunchTask": "build cpp"
+      "miDebuggerPath": "C:/Users/singh/OneDrive/Documents/MinGW/bin/gdb.exe"
     },
     {
       "name": "C/C++ Runner: Debug Session",
@@ -28,10 +19,10 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/College/oops",
-      "program": "c:/College/oops/build/Debug/outDebug",
+      "cwd": "c:/College/oops/March_23",
+      "program": "c:/College/oops/March_23/build/Debug/outDebug",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
+      "miDebuggerPath": "C:/Users/singh/OneDrive/Documents/MinGW/bin/gdb.exe",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
