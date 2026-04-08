@@ -7,7 +7,7 @@ class person{
     public:
     int age;
     char *name;
-    person(int age, char *name){
+    person(int age, const char *name){
         this -> age = age;
         this -> name = new char[strlen(name) + 1];
         strcpy(this -> name, name);
