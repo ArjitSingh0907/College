@@ -22,8 +22,8 @@ int main() {
  
     Student s1, s2; 
  
-    s1.setData(5074, "Arjit Singh"); 
-    s2.setData(5075, "Akshit Gupta"); 
+    s1.setData(5074, "Gunmay Khasria"); 
+    s2.setData(5075, "Kartik Jha"); 
  
     cout << "Student 1 Details:" << endl; 
     s1.display(); 
