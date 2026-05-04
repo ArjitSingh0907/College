@@ -8,10 +8,8 @@ int main(void){
 
     if (age < 18){
         cout << "You are a minor." << endl;
-    } else if (age >= 18 && age < 65){
-        cout << "You are an adult." << endl;
     } else {
-        cout << "You are a senior." << endl;
+        cout << "You are an adult." << endl;
     }
     return 0;
 }
