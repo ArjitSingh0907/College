@@ -18,6 +18,7 @@ int main(void){
     cout << endl;
     cout << "value at index 2 is: " << v.at(2) << endl;
     cout << "value at index 0 is: " << v.at(0) << endl; 
+    cout << "value at index 1 is: " << v[1] << endl;
  
 
     return 0;
