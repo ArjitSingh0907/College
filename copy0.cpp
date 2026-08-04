@@ -12,6 +12,7 @@ int main(void){
 
     cout << endl;
 
+
     for (const auto& val : vec2){
         cout << val << " ";
     }
