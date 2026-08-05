@@ -7,7 +7,7 @@ int main(void){
     for (const auto& it : v){
         cout << it;
     }
-    v.erase(v.end()-4, v.end()-2);
+    v.erase(v.end()-3, v.end()-2);
     cout << endl;
     for (const auto& val : v){
         cout << val;
