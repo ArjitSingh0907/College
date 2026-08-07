@@ -9,7 +9,7 @@ int main(void){
         cout << it << " ";
     }
     cout << endl;
-    vec.insert(vec.begin() + 3, 2, 4);
+    vec.insert(vec.begin() + 3, 1, 2);
     cout << "After inserting : ";
     for (const auto &it : vec){
         cout << it << " ";
