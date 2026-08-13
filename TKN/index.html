@@ -5,38 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ORIGIN '26 | The Beginning of the Next Big Thing</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body class="custom-cursor-active">
+<body>
 
-    <!-- Interactive Star Cursor -->
+    <!-- Star Cursor -->
     <div id="star-cursor" class="star-cursor">
         <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
             <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z"/>
         </svg>
-        <div class="cursor-glow"></div>
     </div>
 
-    <!-- Starry Celestial Background Canvas -->
+    <!-- Soft Celestial Canvas -->
     <canvas id="starfield-canvas"></canvas>
 
     <!-- Navigation Bar -->
-<!-- Navigation Bar -->
-<nav class="glass-nav">
-    <div class="nav-container">
-        <a href="#" class="brand-container magnetic-target">
-            <img src="techniki-logo.png" alt="Techniki Logo" class="brand-logo-img">
-        </a>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#verticals">Verticals</a>
-            <a href="#timeline">Process</a>
-            <a href="#solutions">Pathways</a>
-            <a href="#history">Legacy</a>
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <a href="#" class="brand-container">
+                <img src="techniki-logo.png" alt="Techniki Logo" class="brand-logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#verticals">Verticals</a>
+                <a href="#timeline">Process</a>
+                <a href="#solutions">Pathways</a>
+                <a href="#history">Legacy</a>
+            </div>
+            <a href="#register" class="cta-btn-sm">Register Now</a>
         </div>
-        <a href="#register" class="cta-btn-sm magnetic-target">Register Now</a>
-    </div>
-</nav>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -55,8 +53,8 @@
                 </div>
             </div>
             <div class="hero-actions scroll-reveal">
-                <a href="#register" class="cta-btn-primary magnetic-target">Join Hackathon</a>
-                <a href="#about" class="cta-btn-secondary magnetic-target">Explore Details</a>
+                <a href="#register" class="cta-btn-primary">Join Hackathon</a>
+                <a href="#about" class="cta-btn-secondary">Explore Details</a>
             </div>
         </div>
     </section>
@@ -65,15 +63,15 @@
     <section id="about" class="section">
         <div class="container">
             <div class="grid-2">
-                <div class="glass-card tilt-card scroll-reveal">
+                <div class="glass-card scroll-reveal">
                     <span class="card-badge">THE HACKATHON</span>
                     <h2>About ORIGIN '26</h2>
-                    <p id="about-hackathon-text"></p>
+                    <p id="about-hackathon-text" style="margin-top: 12px; color: var(--text-secondary);"></p>
                 </div>
-                <div class="glass-card tilt-card scroll-reveal">
+                <div class="glass-card scroll-reveal">
                     <span class="card-badge">THE MOTIVE</span>
                     <h2>Solutions > Ideas</h2>
-                    <p id="about-motive-text"></p>
+                    <p id="about-motive-text" style="margin-top: 12px; color: var(--text-secondary);"></p>
                     <div class="organizer-footer">
                         <span>Organized by <strong>Techniki & ASET</strong></span>
                     </div>
@@ -82,31 +80,30 @@
         </div>
     </section>
 
-    <!-- Verticals & Domains Section -->
+    <!-- Verticals Section -->
     <section id="verticals" class="section">
         <div class="container">
             <div class="section-header scroll-reveal">
                 <h2>Core Verticals & Domains</h2>
                 <p>Innovate across high-impact technological frontiers</p>
             </div>
-            <div class="domains-grid" id="domains-grid">
-                <!-- Dynamically populated from data.js -->
-            </div>
+            <div class="domains-grid" id="domains-grid"></div>
         </div>
     </section>
 
     <!-- Timeline Section -->
-    <section id="timeline" class="section">
-        <div class="container">
-            <div class="section-header scroll-reveal">
-                <h2>How ORIGIN '26 Works</h2>
-                <p>From a real-world challenge to a working prototype</p>
-            </div>
-            <div class="timeline-wrapper" id="timeline-wrapper">
-                <!-- Dynamically populated from data.js -->
-            </div>
+    <!-- Timeline / Process Section -->
+<section id="timeline" class="section">
+    <div class="container">
+        <div class="section-header scroll-reveal">
+            <h2>How ORIGIN '26 Works</h2>
+            <p>From a real-world challenge to a working prototype</p>
         </div>
-    </section>
+        <div class="timeline-wrapper" id="timeline-wrapper">
+            <!-- Dynamically populated without tilt-card class -->
+        </div>
+    </div>
+</section>
 
     <!-- Solution Pathways Section -->
     <section id="solutions" class="section">
@@ -116,15 +113,15 @@
                 <p>Choose your build focus and create practical impact</p>
             </div>
             <div class="grid-2">
-                <div class="glass-card tilt-card scroll-reveal">
-                    <div class="pathway-icon">&lt;/&gt;</div>
+                <div class="glass-card scroll-reveal">
+                    <div style="font-size: 2rem; margin-bottom: 12px;">&lt;/&gt;</div>
                     <h3>Software Solutions</h3>
-                    <p>AI-powered platforms, web applications, mobile solutions, automation tools, analytics dashboards, and intelligent software designed to solve real-world challenges.</p>
+                    <p style="color: var(--text-secondary); margin-top: 8px;">AI-powered platforms, web applications, mobile solutions, automation tools, analytics dashboards, and intelligent software designed to solve real-world challenges.</p>
                 </div>
-                <div class="glass-card tilt-card scroll-reveal">
-                    <div class="pathway-icon">⚙️</div>
+                <div class="glass-card scroll-reveal">
+                    <div style="font-size: 2rem; margin-bottom: 12px;">⚙️</div>
                     <h3>Hardware Solutions</h3>
-                    <p>IoT devices, embedded systems, robotics, smart sensors, automation prototypes, and integrated hardware-software solutions built for practical implementation.</p>
+                    <p style="color: var(--text-secondary); margin-top: 8px;">IoT devices, embedded systems, robotics, smart sensors, automation prototypes, and integrated hardware-software solutions built for practical implementation.</p>
                 </div>
             </div>
         </div>
@@ -137,26 +134,23 @@
                 <h2>The Journey So Far</h2>
                 <p>Building an ongoing ecosystem of technical excellence</p>
             </div>
-            <div class="grid-3" id="history-grid">
-                <!-- Dynamically populated from data.js -->
-            </div>
+            <div class="grid-3" id="history-grid"></div>
         </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-brand">
-                <h3>ORIGIN '26</h3>
-                <p>Techniki — Flagship Tech Club of Amity School of Engineering & Technology (ASET), Amity University Haryana.</p>
+                <h3>Techniki</h3>
+                <p>Amity School Of Engineering and Technology (ASET)</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 ORIGIN '26. All rights reserved.</p>
+            <div>
+                <p>&copy; CopyRight - All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Configuration & Application Scripts -->
     <script src="data.js"></script>
     <script src="script.js"></script>
 </body>

@@ -1,4 +1,14 @@
-/* White Starry Celestial & Apple Design Tokens */
+/* Hide system cursor everywhere */
+*, 
+*::before, 
+*::after,
+html, 
+body, 
+a, 
+button, 
+input {
+    cursor: none !important;
+}/* Dark Celestial & Apple Aesthetic Tokens */
 :root {
     --bg-dark: #030712;
     --card-bg: rgba(255, 255, 255, 0.03);
@@ -110,35 +120,47 @@ body {
     margin-top: 10px;
 }
 
-/* Glassmorphism & High-end Cards */
+/* Navigation Bar */
 .glass-nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(3, 7, 18, 0.65);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    background: rgba(3, 7, 18, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--card-border);
 }
 
 .nav-container {
     max-width: 1140px;
     margin: 0 auto;
-    padding: 20px 24px;
+    padding: 12px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.brand-logo {
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: var(--text-primary);
+/* Brand Logo Styling */
+.brand-container {
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    letter-spacing: 1.5px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.brand-logo-img {
+    height: 57px; /* Scaled up 40% from 48px */
+    width: auto;
+    object-fit: contain;
+    display: block;
+    filter: invert(1) hue-rotate(180deg) brightness(1.2);
+    transition: transform 0.3s var(--ease-apple), filter 0.3s var(--ease-apple);
+}
+
+.brand-container:hover .brand-logo-img {
+    transform: scale(1.05);
+    filter: invert(1) hue-rotate(180deg) brightness(1.4) drop-shadow(0 0 12px rgba(255, 255, 255, 0.6));
 }
 
 .nav-links a {
@@ -153,6 +175,7 @@ body {
     color: var(--text-primary);
 }
 
+/* Glassmorphism Cards with 3D Tilt support */
 .glass-card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -264,7 +287,7 @@ body {
     background: rgba(255, 255, 255, 0.05);
 }
 
-/* Grids & Cards Layout */
+/* Grids & Domains Layout */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 
@@ -292,7 +315,7 @@ body {
     box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
 }
 
-/* Timeline & Steps */
+/* Timeline & Process Section - Clean & Normal Cards */
 .timeline-wrapper {
     display: flex;
     flex-direction: column;
@@ -302,7 +325,7 @@ body {
 .timeline-step {
     display: flex;
     gap: 28px;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .step-num {
@@ -314,6 +337,8 @@ body {
     padding: 14px 22px;
     border-radius: 16px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    min-width: 60px;
+    text-align: center;
 }
 
 .card-badge {
@@ -332,7 +357,7 @@ body {
     color: var(--text-secondary);
 }
 
-/* Smooth Progressive Scroll Reveal Rules */
+/* Progressive Scroll Reveal Rules */
 .scroll-reveal {
     opacity: 0;
     transform: translateY(35px);
@@ -364,48 +389,6 @@ body {
     font-size: 0.9rem;
     max-width: 450px;
     margin-top: 10px;
-}
-
-/* Clean Logo Navigation Styling */
-.brand-container {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 4px 0;
-}
-
-.brand-logo-img {
-    height: 42px; /* Crisp, readable height for the detailed typography */
-    width: auto;
-    object-fit: contain;
-    
-    /* 
-      1. invert(1): Inverts black text/lines to white to match dark mode.
-      2. mix-blend-mode: lighten: Eliminates the white box background completely.
-    */
-    filter: invert(1) brightness(1.2) drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
-    mix-blend-mode: lighten;
-    
-    transition: transform 0.3s var(--ease-apple), filter 0.3s var(--ease-apple);
-}
-
-.brand-container:hover .brand-logo-img {
-    transform: scale(1.05);
-    filter: invert(1) brightness(1.4) drop-shadow(0 0 14px rgba(255, 255, 255, 0.8));
-}
-
-.brand-divider {
-    color: rgba(255, 255, 255, 0.25);
-    font-size: 1.2rem;
-    font-weight: 300;
-}
-
-.brand-text {
-    font-weight: 700;
-    font-size: 1.15rem;
-    color: var(--text-primary);
-    letter-spacing: 1.5px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 @media (max-width: 768px) {

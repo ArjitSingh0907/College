@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ==========================================
-    // 1. POPULATE DATA FROM data.js
-    // ==========================================
+    // 1. Populate Data
     document.getElementById("hero-tagline").innerText = SITE_DATA.hero.tagline;
     document.getElementById("hero-title").innerText = SITE_DATA.hero.title;
     document.getElementById("hero-subtitle").innerText = SITE_DATA.hero.subtitle;
@@ -21,10 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
         domainsContainer.appendChild(domainCard);
     });
 
+    // Timeline Section: Clean & Static (No tilt-card class)
     const timelineContainer = document.getElementById("timeline-wrapper");
     SITE_DATA.timeline.forEach((item, idx) => {
         const stepCard = document.createElement("div");
-        stepCard.className = "glass-card timeline-step tilt-card scroll-reveal";
+        stepCard.className = "glass-card timeline-step scroll-reveal";
         stepCard.style.transitionDelay = `${idx * 0.08}s`;
         stepCard.innerHTML = `
             <div class="step-num">${item.step}</div>
@@ -48,9 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         historyContainer.appendChild(eventCard);
     });
 
-    // ==========================================
-    // 2. INTERACTIVE STAR CURSOR WITH LERP PHYSICS
-    // ==========================================
+    // 2. Interactive Star Cursor with Lerp Physics
     const cursor = document.getElementById("star-cursor");
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
@@ -63,7 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     function renderCursor() {
-        // Smooth lerp lag for Apple-like fluid movement
         cursorX += (mouseX - cursorX) * 0.18;
         cursorY += (mouseY - cursorY) * 0.18;
         cursor.style.left = `${cursorX}px`;
@@ -72,16 +68,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     renderCursor();
 
-    // Hover Scaling Trigger on Interactive Elements
     const hoverTargets = document.querySelectorAll("a, button, .glass-card, .domain-pill");
     hoverTargets.forEach((target) => {
         target.addEventListener("mouseenter", () => cursor.classList.add("active"));
         target.addEventListener("mouseleave", () => cursor.classList.remove("active"));
     });
 
-    // ==========================================
-    // 3. LIVE WHITE STARRY CELESTIAL CANVAS
-    // ==========================================
+    // 3. Live White Starry Celestial Canvas
     const canvas = document.getElementById("starfield-canvas");
     const ctx = canvas.getContext("2d");
     let stars = [];
@@ -127,9 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
     resizeCanvas();
     drawStarfield();
 
-    // ==========================================
-    // 4. PROGRESSIVE SCROLL REVEAL OBSERVER
-    // ==========================================
+    // 4. Progressive Scroll Reveal Observer
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -142,9 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
         revealObserver.observe(el);
     });
 
-    // ==========================================
-    // 5. SUBTLE 3D TILT EFFECT ON CARDS
-    // ==========================================
+    // 5. 3D Tilt Effect applied ONLY to elements explicitly assigned .tilt-card
     document.querySelectorAll(".tilt-card").forEach((card) => {
         card.addEventListener("mousemove", (e) => {
             const rect = card.getBoundingClientRect();
