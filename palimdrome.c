@@ -17,7 +17,8 @@ int main(void){
 
     if (original == reverse){
         printf("Palindrome.");
-    } else {
+    } 
+    else {
         printf("Not palindrome.");
     }
     return 0;
