@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORIGIN '26 | The Beginning of the Next Big Thing</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Canvas/Glows -->
+    <div class="celestial-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="stars-layer"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">ORIGIN '26</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#verticals">Verticals</a>
+                <a href="#timeline">Process</a>
+                <a href="#solutions">Pathways</a>
+                <a href="#history">Legacy</a>
+            </div>
+            <a href="#register" class="cta-btn-sm">Register Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-content">
+            <span class="hero-tagline" id="hero-tagline"></span>
+            <h1 class="hero-title" id="hero-title"></h1>
+            <p class="hero-subtitle" id="hero-subtitle"></p>
+            <div class="meta-pills">
+                <div class="pill">
+                    <span class="icon">📅</span>
+                    <span id="hero-date"></span>
+                </div>
+                <div class="pill">
+                    <span class="icon">📍</span>
+                    <span id="hero-venue"></span>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="#register" class="cta-btn-primary">Join Hackathon</a>
+                <a href="#about" class="cta-btn-secondary">Explore Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="grid-2">
+                <div class="glass-card main-about">
+                    <span class="card-badge">THE HACKATHON</span>
+                    <h2>About ORIGIN '26</h2>
+                    <p id="about-hackathon-text"></p>
+                </div>
+                <div class="glass-card motive-card">
+                    <span class="card-badge">THE MOTIVE</span>
+                    <h2>Solutions > Ideas</h2>
+                    <p id="about-motive-text"></p>
+                    <div class="organizer-footer">
+                        <span>Organized by <strong>Techniki & ASET</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verticals & Domains Section -->
+    <section id="verticals" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Core Verticals & Domains</h2>
+                <p>Innovate across high-impact technological frontiers</p>
+            </div>
+            <div class="domains-grid" id="domains-grid">
+                <!-- Dynamically populated from data.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works / Timeline Section -->
+    <section id="timeline" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How ORIGIN '26 Works</h2>
+                <p>From a real-world challenge to a working prototype</p>
+            </div>
+            <div class="timeline-wrapper" id="timeline-wrapper">
+                <!-- Dynamically populated from data.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Pathways Section -->
+    <section id="solutions" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Solution Pathways</h2>
+                <p>Choose your build focus and create practical impact</p>
+            </div>
+            <div class="grid-2">
+                <div class="glass-card pathway-card">
+                    <div class="pathway-icon">&lt;/&gt;</div>
+                    <h3>Software Solutions</h3>
+                    <p>AI-powered platforms, web applications, mobile solutions, automation tools, analytics dashboards, and intelligent software designed to solve real-world challenges.</p>
+                </div>
+                <div class="glass-card pathway-card">
+                    <div class="pathway-icon">⚙️</div>
+                    <h3>Hardware Solutions</h3>
+                    <p>IoT devices, embedded systems, robotics, smart sensors, automation prototypes, and integrated hardware-software solutions built for practical implementation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History / Past Events -->
+    <section id="history" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Journey So Far</h2>
+                <p>Building an ongoing ecosystem of technical excellence</p>
+            </div>
+            <div class="grid-3" id="history-grid">
+                <!-- Dynamically populated from data.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>ORIGIN '26</h3>
+                <p>Techniki — Flagship Tech Club of Amity School of Engineering & Technology (ASET), Amity University Haryana.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ORIGIN '26. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Data & Logic -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
