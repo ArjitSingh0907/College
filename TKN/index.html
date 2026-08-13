@@ -7,36 +7,44 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Background Canvas/Glows -->
-    <div class="celestial-bg">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="stars-layer"></div>
+<body class="custom-cursor-active">
+
+    <!-- Interactive Star Cursor -->
+    <div id="star-cursor" class="star-cursor">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z"/>
+        </svg>
+        <div class="cursor-glow"></div>
     </div>
 
+    <!-- Starry Celestial Background Canvas -->
+    <canvas id="starfield-canvas"></canvas>
+
     <!-- Navigation Bar -->
-    <nav class="glass-nav">
-        <div class="nav-container">
-            <a href="#" class="brand-logo">ORIGIN '26</a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#verticals">Verticals</a>
-                <a href="#timeline">Process</a>
-                <a href="#solutions">Pathways</a>
-                <a href="#history">Legacy</a>
-            </div>
-            <a href="#register" class="cta-btn-sm">Register Now</a>
+<!-- Navigation Bar -->
+<nav class="glass-nav">
+    <div class="nav-container">
+        <a href="#" class="brand-container magnetic-target">
+            <img src="techniki-logo.png" alt="Techniki Logo" class="brand-logo-img">
+        </a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#verticals">Verticals</a>
+            <a href="#timeline">Process</a>
+            <a href="#solutions">Pathways</a>
+            <a href="#history">Legacy</a>
         </div>
-    </nav>
+        <a href="#register" class="cta-btn-sm magnetic-target">Register Now</a>
+    </div>
+</nav>
 
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container hero-content">
-            <span class="hero-tagline" id="hero-tagline"></span>
-            <h1 class="hero-title" id="hero-title"></h1>
-            <p class="hero-subtitle" id="hero-subtitle"></p>
-            <div class="meta-pills">
+            <span class="hero-tagline scroll-reveal" id="hero-tagline"></span>
+            <h1 class="hero-title scroll-reveal" id="hero-title"></h1>
+            <p class="hero-subtitle scroll-reveal" id="hero-subtitle"></p>
+            <div class="meta-pills scroll-reveal">
                 <div class="pill">
                     <span class="icon">📅</span>
                     <span id="hero-date"></span>
@@ -46,9 +54,9 @@
                     <span id="hero-venue"></span>
                 </div>
             </div>
-            <div class="hero-actions">
-                <a href="#register" class="cta-btn-primary">Join Hackathon</a>
-                <a href="#about" class="cta-btn-secondary">Explore Details</a>
+            <div class="hero-actions scroll-reveal">
+                <a href="#register" class="cta-btn-primary magnetic-target">Join Hackathon</a>
+                <a href="#about" class="cta-btn-secondary magnetic-target">Explore Details</a>
             </div>
         </div>
     </section>
@@ -57,12 +65,12 @@
     <section id="about" class="section">
         <div class="container">
             <div class="grid-2">
-                <div class="glass-card main-about">
+                <div class="glass-card tilt-card scroll-reveal">
                     <span class="card-badge">THE HACKATHON</span>
                     <h2>About ORIGIN '26</h2>
                     <p id="about-hackathon-text"></p>
                 </div>
-                <div class="glass-card motive-card">
+                <div class="glass-card tilt-card scroll-reveal">
                     <span class="card-badge">THE MOTIVE</span>
                     <h2>Solutions > Ideas</h2>
                     <p id="about-motive-text"></p>
@@ -77,7 +85,7 @@
     <!-- Verticals & Domains Section -->
     <section id="verticals" class="section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header scroll-reveal">
                 <h2>Core Verticals & Domains</h2>
                 <p>Innovate across high-impact technological frontiers</p>
             </div>
@@ -87,10 +95,10 @@
         </div>
     </section>
 
-    <!-- How It Works / Timeline Section -->
+    <!-- Timeline Section -->
     <section id="timeline" class="section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header scroll-reveal">
                 <h2>How ORIGIN '26 Works</h2>
                 <p>From a real-world challenge to a working prototype</p>
             </div>
@@ -103,17 +111,17 @@
     <!-- Solution Pathways Section -->
     <section id="solutions" class="section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header scroll-reveal">
                 <h2>Solution Pathways</h2>
                 <p>Choose your build focus and create practical impact</p>
             </div>
             <div class="grid-2">
-                <div class="glass-card pathway-card">
+                <div class="glass-card tilt-card scroll-reveal">
                     <div class="pathway-icon">&lt;/&gt;</div>
                     <h3>Software Solutions</h3>
                     <p>AI-powered platforms, web applications, mobile solutions, automation tools, analytics dashboards, and intelligent software designed to solve real-world challenges.</p>
                 </div>
-                <div class="glass-card pathway-card">
+                <div class="glass-card tilt-card scroll-reveal">
                     <div class="pathway-icon">⚙️</div>
                     <h3>Hardware Solutions</h3>
                     <p>IoT devices, embedded systems, robotics, smart sensors, automation prototypes, and integrated hardware-software solutions built for practical implementation.</p>
@@ -122,10 +130,10 @@
         </div>
     </section>
 
-    <!-- History / Past Events -->
+    <!-- History Section -->
     <section id="history" class="section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header scroll-reveal">
                 <h2>The Journey So Far</h2>
                 <p>Building an ongoing ecosystem of technical excellence</p>
             </div>
@@ -148,7 +156,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript Data & Logic -->
+    <!-- Configuration & Application Scripts -->
     <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
