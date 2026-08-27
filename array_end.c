@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void) {
     int arr[20];
@@ -13,23 +14,19 @@ int main(void) {
     }
 
     printf("Initial array -> ");
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++){
         printf("%d ", arr[i]);
     }
     printf("\n");
 
-    printf("Enter element to insert at beginning: ");
+    printf("Enter element to insert at end: ");
     scanf("%d", &element);
 
-    for (int i = size; i > 0; i--) {
-        arr[i] = arr[i - 1];
-    }
-
-    arr[0] = element;
+    arr[size] = element;
     size++;
 
     printf("Updated array -> ");
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++){
         printf("%d ", arr[i]);
     }
     printf("\n");
