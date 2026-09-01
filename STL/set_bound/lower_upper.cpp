@@ -4,7 +4,6 @@ using namespace std;
 
 int main() {
     set<int> s = {2, 4, 6, 8, 10};
-
     for(int key : {1, 4, 5, 10, 12}){
         auto lb = s.lower_bound(key);
         auto ub = s.upper_bound(key);
