@@ -8,7 +8,6 @@ int main() {
     int low, high;
     cout << "Enter lower and upper limits: ";
     cin >> low >> high;
-
     auto start = s.lower_bound(low);
     auto end = s.upper_bound(high);
 
