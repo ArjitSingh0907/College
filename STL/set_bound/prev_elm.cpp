@@ -10,7 +10,6 @@ int main() {
     cin >> key;
 
     auto it = s.lower_bound(key);
-
     if(it != s.end())
         cout << "Smallest element >= " << key << " is " << *it << endl;
     else
