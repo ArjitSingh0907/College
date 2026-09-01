@@ -13,6 +13,7 @@ int main() {
     auto ub = rolls.upper_bound(key);
 
     cout << "Lower bound (current or next smaller): ";
+    
     if(lb != rolls.end()) cout << *lb << endl;
     else cout << "None" << endl;
 
