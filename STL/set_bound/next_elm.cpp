@@ -8,7 +8,6 @@ int main() {
     int key;
     cout << "Enter a number: ";
     cin >> key;
-
     auto it = s.upper_bound(key);
 
     if(it != s.end())
