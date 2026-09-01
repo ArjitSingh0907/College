@@ -7,7 +7,6 @@ int main() {
 
     int key = 1;
     auto it = s.lower_bound(key);
-
     if(it != s.end())
         cout << "Lower bound of " << key << " is " << *it << endl;
     else
