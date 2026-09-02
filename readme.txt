@@ -1,2 +1,1 @@
-hello
-checking the contribution graph
+today, was the final day with this repo. now i will be pushing files into other repo
